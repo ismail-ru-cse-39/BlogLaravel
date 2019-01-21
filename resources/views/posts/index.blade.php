@@ -42,7 +42,7 @@
 						<tr>
 							<th>{{ $post->id }}</th>
 							<td>{{ $post->title }}</td>
-							<td>{{ substr($post->body, 0, 50)}}</td>
+							<td>{{ substr($post->body, 0, 50)}}{{ strlen($post->body) > 50 ? "..." : "" }}</td>
 							<td>{{ $post->created_at }}</td>
 
 							<td><a href="#" class="btn btn-default">View</a><a href="#" class="btn btn-default">Edit</a></td>
