@@ -31,6 +31,6 @@
 
 @section('scripts')
 
-	{!! Html::script('js/parsley.min.js') !!}
+	{!! Html::script('js/parsley.min.js') !!} 
 
 @endsection
