@@ -10,8 +10,12 @@
 		<div class="col-md-8">
 
 			{!! Form::model($post, ['route' => ['posts.update', $post->id]]) !!}
+
+			{{ Form::label('title', "Title:") }}
 			
-			{{ Form::text('title', null, ["class" => 'form-control']) }}
+			{{ Form::text('title', null, ["class" => 'form-control form-control-lg']) }}
+
+			{{ Form::label('body', "Body:", ['class' => 'form-spacing-top']) }}
 
 			{{ Form::textarea('body', null, ["class" => 'form-control']) }}
 			
