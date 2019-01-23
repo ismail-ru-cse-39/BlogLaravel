@@ -9,7 +9,7 @@
 		
 		<div class="col-md-8">
 
-			{!! Form::model($post, ['route' => ['posts.update', $post->id]]) !!}
+			{!! Form::model($post, ['route' => ['posts.update', $post->id], 'method' => 'PUT']) !!}
 
 			{{ Form::label('title', "Title:") }}
 			
@@ -43,7 +43,8 @@
 						
 					</div>
 					<div class="col-sm-6">
-						{!!Html::linkRoute('posts.update', 'Save Changes', array($post->id), array('class' =>'btn btn-success btn-block' )) !!}
+						{{ form::submit('Save Changes', ['class' => 'btn btn-success btn-block'] ) }}
+						
 
 					</div>
 				</div>
