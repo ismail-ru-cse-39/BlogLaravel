@@ -54,10 +54,13 @@
 
 			</table>
 
+				<div class="text-center">
+					{!! $posts -> links(); !!}<!--facing problem-->
+				
+				</div>
+
 		</div>
+
 	</div>
-
-
-
 
 @endsection
