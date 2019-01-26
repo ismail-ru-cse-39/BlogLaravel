@@ -105,10 +105,23 @@ class PostController extends Controller
     {
         //validate the data
         
+        $post = Post::find($id);
+
+        if ($request->input('slug') == $post->slug) {
+            # code...
+    
+        
         $this->validate($request, array('title' => 'required|max:255',
-            'slug' => 'required|alpha_dash|min:5|max:255|unique:posts,slug',
             'body' => 'required'
             ));
+
+    } else{
+
+
+        $this->validate($request, array('title' => 'required|max:255',
+            'slug' => 'required|alpha_dash|min:5|max:255|unique:posts,slug',
+            'body' => 'required'));
+    }
 
         //Save the data to the database
             $post = Post::find($id);
