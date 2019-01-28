@@ -8,6 +8,7 @@
 		<div class="col-md-6 offset-md-3">
 			{!!  Form::open()  !!}
 				
+			
 				{{ Form::label('email', 'Email:') }}
 				{{ Form::email('email', null,['class' => 'form-control']) }}
 				
