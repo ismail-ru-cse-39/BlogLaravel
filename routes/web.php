@@ -21,7 +21,8 @@ Route::group(['middleware'=> ['web']], function(){
 		//Route::get('auth/login', 'Auth\LoginController@showLoginForm');
 		Route::get('auth/login', ['uses' => 'Auth\LoginController@showLoginForm', 'as' => 'auth.login' ]);
 		Route::post('auth/login', 'Auth\LoginController@login');
-		Route::get('auth/logout', 'Auth\LoginController@logout');
+		//Route::get('auth/logout', 'Auth\LoginController@logout');
+		Route::get('auth/logout', ['uses' => 'Auth\LoginController@logout', 'as' => 'auth.logout' ]);
 
 		//Registration route
 		Route::get('auth/register', 'Auth\RegisterController@showRegistrationForm');
